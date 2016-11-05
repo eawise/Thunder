@@ -14,17 +14,29 @@
 <body <?php body_class(); ?>>
 
 <header>
-  <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h1>
+    <div class="headerLeft">
+      
+      <?php 
+         $custom_logo_id = get_theme_mod( 'custom_logo' );
+         $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+            ?>
+      <img src="<?php echo $image[0]; ?>" alt="">
+      <h2><?php wp_title(); ?></h2>
 
-    <?php wp_nav_menu( array(
+    </div>
+    
+    <div class="headerRight">
+      
+      <?php wp_nav_menu( array(
       'container' => false,
-      'theme_location' => 'primary'
-    )); ?>
-  </div> <!-- /.container -->
+      'theme_location' => 'primary')); ?>
+
+    </div>
+
+    
+
 </header><!--/.header-->
+
+
+
 

@@ -1,3 +1,20 @@
 footer {
 	clear: both;
+	background: grey;
+	.container{
+		height: 20px;
+		margin: 20px;
+		padding: 20px;
+		ul{
+			display: flex;
+			justify-content:right;
+			li{
+				a{
+					height: 100px;
+					width: 100px;
+				}
+			}
+		}
+	}
 }
+
